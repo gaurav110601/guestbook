@@ -21,7 +21,7 @@ A simple and elegant web-based guestbook that allows visitors to leave their mes
 
 ## 📫 Contact
 
-Created with ❤️ by Gaurav Sharma  
+Created by Gaurav Sharma  
 [![LinkedIn](https://img.shields.io/badge/LinkedIn--blue?logo=linkedin&logoColor=white)](https://www.linkedin.com/in/gaurav110601)
 
 ---
