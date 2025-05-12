@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    <title>GUESTBOOK</title>
+    <style>
+        body
+        {
+            height: 100vh;
+            text-align: center;
+            align-items: center;
+            flex-direction: column;
+            display: flex;
+        }
+        textarea
+        {
+            scroll-behavior: auto;
+        }
+        .option
+        {
+            background-color: rgb(255, 255, 255);
+            font-size: large;
+        }
+        #button input
+        {
+            background-color: black;
+            color:white;
+            border:2px solid white;
+            font-size: large;
+        }
+        #container
+        {
+            background-image:lineargradient(to bottom, white, rgb(176, 176, 240));
+            width: 40%;
+            border: 2px solid rgb(186, 186, 253);
+            height: 500px;
+        }
+    </style>
+    <script>
+        function validateForm() {
+        let x = document.forms["details"]["email"].value;
+        let y = document.forms["details"]["comment"].value;
+        if (x == "" || y == "")
+        {
+            alert("Email and comment must be filled out");
+            return false;
+        }
+    }
+    </script>
+    </head>
+    <body>
+        <div id="container">
+            <h1>OUR GUESTBOOK</h1>
+            <form action="/action_page.php" name="details" method="post" onsubmit="return validateForm()">
+                <label name="name">Please give us your name</label><br><br>
+                <input type="text" name="name" size="40px"><br><br>
+                <label name="email">Please give us your email Address</label><br><br>
+                <input type="email" name="email" size="40px"><br><br>
+                <label name="comment">Bouquets or Brickbats Are Welcome</label><br><br>
+                <textarea name="comment" cols="42px" rows="5px"></textarea><br><br>
+                <label name="select">Can We connect you with information about our products or services.</label><br>
+                <div id="box">
+                    <input type="radio" name="connect" value="yes">
+                    <label class="option" name="yes">Yes</label>
+                    <input type="radio" name="connect" value="No">
+                    <label class="option" name="no">No</label><br>
+                    <br>
+                    <div id="button">
+                        <input type="submit" value="Submit">
+                        <input type="reset" value="Reset">
+                        <input type="button" name="abort" value="about">
+                    </div>
+                </div>
+            </form>
+        </div>
+    </body>
+</html>
